@@ -11,8 +11,8 @@ export default function moveLinkMarker(
     markers.forEach((marker) => {
       const markerItem = marker;
       if (e) {
-        markerItem.style.left = e.offsetLeft + 'px';
-        markerItem.style.width = e.offsetWidth + 'px';
+        markerItem.style.left = `${e.offsetLeft}px`;
+        markerItem.style.width = `${e.offsetWidth}px`;
       } else {
         markerItem.style.width = 0;
       }

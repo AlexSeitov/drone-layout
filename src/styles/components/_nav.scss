@@ -20,10 +20,6 @@
         transform: translateX(0);
         visibility: visible;
       }
-
-      .nav__link {
-        // display: block;
-      }
     }
   }
 }
@@ -32,38 +28,26 @@
   &__list {
     position: relative;
   }
-
-  &__item {
-    background-image: url('../images/icons/border-bottom.svg');
-    background-repeat: no-repeat;
-    background-position: bottom left;
-  }
 }
 
 .link-marker {
-  @media (min-width: $lg) {
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    transition: 0.5s;
-
-    &::after {
+  @media (hover: hover) {
+    @media (min-width: $lg) {
       position: absolute;
       bottom: 0;
-      left: 50%;
-      width: 50%;
-      height: rem(4);
-      background-color: $white;
-      transform: translateX(-50%);
-      content: '';
+      z-index: 1;
+      transition: all 0.5s;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 50%;
+        height: rem(4);
+        background-color: $white;
+        transform: translateX(-50%);
+        content: '';
+      }
     }
   }
 }
-
-// .footer__nav .link-marker {
-//   @media (min-width: $lg) {
-//     &::after {
-//       background-color: $white;
-//     }
-//   }
-// }

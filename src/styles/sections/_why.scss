@@ -81,12 +81,7 @@
   // .why__specs-item
 
   &__specs-item {
-    // width: calc(50% - 10px);
     text-align: center;
-
-    @media (min-width: $md) {
-      // width: initial;
-    }
   }
 
   // .why__specs-num

@@ -16,7 +16,7 @@ import burger from './modules/burger.js';
 import moveLinkMarker from './modules/moveLinkMarker.js';
 
 // moveLinkMarker ==============================================================
-moveLinkMarker('.nav__list', '.nav__item', '.link-marker');
+moveLinkMarker('.nav__list', '.nav__link', '.link-marker');
 
 // Dropdown select ==========================================================
 // dropdownSelect();
