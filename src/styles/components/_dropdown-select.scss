@@ -1,0 +1,82 @@
+@use '../base/functions' as *;
+@use '../base/variables' as *;
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown__btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 14px;
+  text-align: left;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+input:focus,
+.dropdown__btn:focus,
+.dropdown__btn_active {
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 30%);
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.dropdown__btn::after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  border-color: rgb(122, 152, 253) transparent transparent transparent;
+  border-style: solid;
+  border-width: 8.7px 5px 0;
+  transform: translateY(-50%);
+  content: '';
+  pointer-events: none;
+}
+
+.dropdown__list {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  max-height: 260px;
+  padding: 4px 0;
+  overflow-y: scroll;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 30%);
+  transform: translateY(4px);
+}
+
+.dropdown__list_visible {
+  display: block;
+}
+
+.dropdown__list-item {
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.dropdown__list-item:not(:last-child) {
+  border-bottom: 1px solid rgba(128, 128, 128, 20%);
+}
+
+.dropdown__list-item:hover {
+  color: rgb(126, 156, 255);
+}
+
+.dropdown__input-hidden {
+  display: none;
+}

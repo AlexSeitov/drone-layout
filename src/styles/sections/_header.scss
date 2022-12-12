@@ -1,0 +1,93 @@
+@use '../base/functions' as *;
+@use '../base/variables' as *;
+
+.header {
+  padding: rem(30) 0;
+  background-color: $black;
+
+  @media (min-width: $lg) {
+    padding: rem(60) 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $lg) {
+      justify-content: space-between;
+    }
+  }
+
+  // .header__logo
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    span {
+      display: inline-block;
+      margin-left: rem(20);
+      color: $white;
+      font-weight: 600;
+      font-size: rem(18);
+
+      @media (min-width: $sm) {
+        font-size: rem(26);
+      }
+
+      @media (min-width: $lg) {
+        display: none;
+      }
+    }
+  }
+
+  // .header__search
+
+  &__phone {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: block;
+      margin-left: initial;
+    }
+  }
+
+  &__burger {
+    margin-left: auto;
+  }
+}
+
+.nav {
+  // .nav__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $lg) {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+  }
+
+  // .nav__link
+
+  &__link {
+    display: inline-block;
+    padding: rem(10) rem(15) rem(10);
+    color: $black;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @media (min-width: $lg) {
+      padding: rem(10) rem(30);
+      color: $white;
+    }
+
+    @media (min-width: $xl) {
+      padding: rem(10) rem(50);
+    }
+  }
+}

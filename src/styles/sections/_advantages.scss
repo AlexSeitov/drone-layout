@@ -1,0 +1,75 @@
+@use '../base/functions' as *;
+@use '../base/variables' as *;
+
+.advantages {
+  margin-top: rem(30);
+
+  // .advantages__row
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $sm) {
+      flex-direction: row;
+    }
+  }
+
+  // .advantages__item
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: center;
+    margin-bottom: rem(20);
+
+    @media (min-width: $sm) {
+      &:first-child {
+        margin-right: rem(20);
+      }
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .advantages__info-wrapper
+
+  &__info-wrapper {
+    position: absolute;
+    top: 15%;
+    padding: rem(15);
+    text-align: center;
+  }
+
+  &__title--white,
+  &__text--white {
+    color: $white;
+  }
+
+  // .advantages__text
+
+  &__text {
+    max-width: rem(350);
+    font-size: rem(18);
+
+    @media (min-width: $md) {
+      font-size: rem(22);
+    }
+
+    @media (min-width: $xl) {
+      max-width: rem(457);
+    }
+  }
+}

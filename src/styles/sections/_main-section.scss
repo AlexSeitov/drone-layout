@@ -1,0 +1,62 @@
+@use '../base/functions' as *;
+@use '../base/variables' as *;
+
+.main-section {
+  padding-bottom: rem(30);
+  color: $white;
+  background-color: $black;
+
+  @media (min-width: $sm) {
+    padding-bottom: rem(50);
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .main-section__subtitle
+
+  &__subtitle {
+    max-width: rem(684);
+    margin-bottom: rem(30);
+    text-align: center;
+  }
+
+  // .main-section__btn
+
+  &__btn {
+    position: relative;
+    z-index: 2;
+    margin-bottom: rem(80);
+  }
+
+  // .main-section__img-wrapper
+
+  &__img-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: rem(518);
+    margin-right: auto;
+    margin-left: auto;
+    animation: up-and-down 4s linear infinite;
+  }
+
+  // .main-section__img
+
+  &__img {
+    height: auto;
+  }
+}
+
+@keyframes up-and-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+}

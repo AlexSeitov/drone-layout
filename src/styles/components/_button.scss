@@ -1,0 +1,28 @@
+@use '../base/functions' as *;
+@use '../base/variables' as *;
+
+.btn {
+  display: inline-block;
+  padding: rem(11) rem(58) rem(12);
+  color: $white;
+  font-weight: 600;
+  font-size: rem(14);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $btnColor;
+  border-radius: rem(30);
+  cursor: pointer;
+  transition: all $transition;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $btnColorHover;
+    }
+  }
+
+  @media (min-width: $md) {
+    padding: rem(11) rem(58) rem(12);
+    font-size: rem(18);
+  }
+}

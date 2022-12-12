@@ -1,0 +1,46 @@
+@use 'functions' as *;
+@use 'sass:color';
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap';
+
+// Fonts, text
+$fontFamily: 'Poppins', sans-serif;
+$fontWeight: 300;
+$lineHeight: 1.5;
+$textColor: #222;
+
+// Colors
+// $primaryColor: #131249;
+// $secondaryColor: #c84500;
+
+// $primaryBgColor: #646464;
+// $secondaryBgColor: #646464;
+// $tertiaryBgColor: #646464;
+$black: #000;
+$white: #fff;
+$btnColor: #2e4dec;
+$btnColorHover: color.adjust($btnColor, $blackness: 10%);
+$borderColor: #e5e5e5;
+$grey: #f7f8fa;
+$placeholderColor: #999;
+
+// Others
+$radius: rem(10);
+$shadow: 0 0 rem(12) 0 rgba(230, 235, 245, 50%);
+$transition: 0.3s;
+
+// Sizes
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1300; // container size
+$containerPadding: 30;
+
+// Container width
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Breakpoints
+$sm: rem(568);
+$md: rem(768);
+$lg: rem(1024);
+$xl: rem(1280);
+$xxl: rem(1530);
+$fhd: rem(1920);

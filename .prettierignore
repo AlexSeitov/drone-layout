@@ -1,0 +1,4 @@
+src/styles/vendors/*.scss
+src/scripts/vendors/*.js
+dist
+node_modules

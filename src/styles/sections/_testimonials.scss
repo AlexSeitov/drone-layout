@@ -1,0 +1,89 @@
+@use '../base/functions' as *;
+@use '../base/variables' as *;
+
+.testimonials {
+  margin: rem(50) 0;
+
+  @media (min-width: $md) {
+    margin: rem(70) 0;
+  }
+
+  // .testimonials__title
+
+  &__title {
+    text-align: center;
+  }
+
+  // .testimonials__row
+
+  &__row {
+    display: grid;
+    grid-auto-flow: column;
+    gap: rem(15);
+    overflow-x: auto;
+  }
+
+  // .testimonials__item
+
+  &__item {
+    width: rem(250);
+    padding: rem(20) rem(10);
+    border: 1px solid $borderColor;
+    border-radius: $radius;
+
+    @media (min-width: $md) {
+      width: rem(420);
+      padding: rem(30);
+    }
+  }
+
+  // .testimonials__text
+
+  &__text {
+    margin-bottom: rem(30);
+  }
+
+  // .testimonials__author-row
+
+  &__author-row {
+    display: flex;
+  }
+
+  // .testimonials__author-icon
+
+  &__author-icon {
+    width: rem(70);
+    height: rem(70);
+    margin-right: rem(15);
+    overflow: hidden;
+    border-radius: 50%;
+
+    @media (min-width: $md) {
+      margin-right: rem(30);
+    }
+  }
+
+  // .testimonials__author-name
+
+  &__author-name {
+    display: block;
+    margin-bottom: rem(4);
+    font-weight: 600;
+    font-size: rem(18);
+
+    @media (min-width: $md) {
+      font-size: rem(20);
+    }
+  }
+
+  // .testimonials__author-prof
+
+  &__author-prof {
+    display: block;
+    font-size: rem(16);
+
+    @media (min-width: $md) {
+      font-size: rem(18);
+    }
+  }
+}

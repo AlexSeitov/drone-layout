@@ -1,0 +1,7 @@
+@use '../base/functions' as *;
+@use '../base/variables' as *;
+
+.tabs button[aria-selected='true'] {
+  // color: #ccc;
+  // background-color: $mainColor;
+}

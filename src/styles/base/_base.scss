@@ -1,0 +1,149 @@
+@use 'functions' as *;
+@use 'variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: $textColor;
+  font-weight: $fontWeight;
+  font-size: rem(16);
+  font-family: $fontFamily;
+  line-height: $lineHeight;
+  text-rendering: optimizespeed;
+
+  @media (min-width: $md) {
+    font-size: rem(18);
+  }
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  max-width: rem($containerWidth);
+  margin: 0 auto;
+  padding: 0 rem(15);
+}
+
+.logo {
+  max-width: rem(75);
+}
+
+.search-icon {
+  width: rem(25);
+  height: rem(25);
+  cursor: pointer;
+}
+
+.disable-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+
+  @media (max-width: rem(1023.98)) {
+    &::after {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(#000, 60%);
+      backdrop-filter: blur(4px);
+      content: '';
+    }
+  }
+}
+
+.line-bottom {
+  position: relative;
+
+  @media (min-width: $lg) {
+    &::after {
+      position: absolute;
+      bottom: rem(-8);
+      left: 0;
+      width: 100%;
+      border-bottom: 4px solid $white;
+      opacity: 0;
+      transition: opacity $transition;
+      content: '';
+    }
+
+    @media (hover: hover) {
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.phone {
+  color: $white;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+
+  @media (min-width: $lg) {
+    &::after {
+      position: absolute;
+      bottom: rem(-8);
+      left: 0;
+      width: 100%;
+      border-bottom: 4px solid $white;
+      opacity: 0;
+      transition: opacity $transition;
+      content: '';
+    }
+
+    @media (hover: hover) {
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// .social-icon {
+//   display: inline-block;
+//   width: rem(38);
+//   height: rem(38);
+//   transition: transform $transition;
+
+//   @media (hover: hover) {
+//     &:hover {
+//       transform: scale(1.2);
+//     }
+//   }
+// }

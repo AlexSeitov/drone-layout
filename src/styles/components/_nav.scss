@@ -1,0 +1,69 @@
+@use '../base/functions' as *;
+@use '../base/variables' as *;
+
+.header {
+  &__nav {
+    @media (max-width: rem(1023.98)) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      padding-top: rem(20);
+      background-color: #fff;
+      transform: translateX(200%);
+      visibility: hidden;
+      transition: transform $transition;
+
+      &.nav_active {
+        transform: translateX(0);
+        visibility: visible;
+      }
+
+      .nav__link {
+        // display: block;
+      }
+    }
+  }
+}
+
+.nav {
+  &__list {
+    position: relative;
+  }
+
+  &__item {
+    background-image: url('../images/icons/border-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+}
+
+.link-marker {
+  @media (min-width: $lg) {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    transition: 0.5s;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 50%;
+      height: rem(4);
+      background-color: $white;
+      transform: translateX(-50%);
+      content: '';
+    }
+  }
+}
+
+// .footer__nav .link-marker {
+//   @media (min-width: $lg) {
+//     &::after {
+//       background-color: $white;
+//     }
+//   }
+// }

@@ -1,0 +1,3 @@
+src/styles/vendors/**/*.scss
+dist
+node_modules
